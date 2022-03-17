@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- carrega página a cada 30 segundos -->
+	<!-- <meta http-equiv="refresh" content="30"> -->
+	<title>Document</title>
+	<link rel="stylesheet" href="./src/assets/css/reset.css">
+	<link rel="stylesheet" href="./src/assets/css/styles.css">
+	<link rel="stylesheet" href="./src/assets/css/buttonInputSubmit.css">
+	<link rel="stylesheet" href="./src/assets/csserror/cpf-error.css">
+
+	<!-- <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> -->
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<div class="container-header">
+
+				
+				<aside class="aside-padding">
+					<!-- <a href="#" class="config">configuração</a> -->
+					<input class="exit" type="button" value="Sair" onclick="exit()">
+				</aside>
+
+				<!-- menu hamburguer -->
+				<div class="menu-section">
+					<div class="menu-toggle">
+						<div class="one"></div>
+						<div class="two"></div>
+						<div class="three"></div>
+					</div>
+					<nav>
+						<ul>
+							<li><a href="./home.html">Home</a></li>
+							<li><a href="./searche.html">Buscas</a></li>
+							<li><a class="generatePDF" href="./generatePDF.html">Prontuarios PDF</a></li>
+							<li><input class="exitMenuHamburguer" type="button" value="Sair" onclick="exit()"></li>
+						</ul>
+					</nav>
+				</div>
+
+			</div>
+		</header>
+
+		<form class="flex-row-form reset-form" name="formSend">
+			<div class="flex1-form">
+				<label for="name_full">Nome completo:</label>
+				<input class="input-name" type="text" name="name"  placeholder="Nome Completo" required>
+
+				<label for="nascimento">Data de nascimento:</label>
+				<input class="input-nasc" type="text" name="nascimento"  placeholder="Data Nascimento" required>
+
+				<label for="name_mae">Nome da mãe:</label>
+				<input class="input-mae" type="text" name="mae"  placeholder="Nome da mãe" required>
+
+				<label for="cartao do sus">Cartão do sus:</label>
+				<input class="input-sus" type="text" name="sus"  placeholder="Cartão do SUS" required>
+
+				<label for="cep">CEP:</label>
+				<input class="input-cep" type="search" name="cep"  placeholder="CEP" maxlength="9" id="cep" required>
+
+				<label for="bairro">Bairro:</label>
+				<input class="input-bairro" type="text" name="bairro"  placeholder="Bairro" id="bairro" required>
+
+				<label for="endereco">Endereço:</label>
+				<input class="input-endereco" type="text" name="endereco"  placeholder="Endereço" id="logradouro" required>
+
+
+				<!-- textarea -->
+				<label for="obs">Descrição:</label>
+				<textarea class="input-descricao" name="descricao" cols="30" rows="10" 
+					placeholder="descrição do paciente" style="resize: none" required></textarea>
+			</div>
+
+			<div class="flex2-form">
+				<label for="sexo">Sexo:</label>
+				<select class="input-sexo" name="sexo" type="text">
+					<option value="M">M</option>
+					<option value="F">F</option>
+				</select>
+
+
+				<label for="data-emissao">Data de emissão:</label>
+				<input class="input-emissao" type="text" name="dataemissao"  placeholder="Data emissão" required>
+
+				<label for="rg">RG:</label>
+				<input class="input-rg" type="text" name="rg"  placeholder="Número endentidade" required>
+
+				<label for="cpf">CPF:</label>
+				<input class="input-cpf" type="text" name="cpf" placeholder="CPF">
+				<div class="cpf-error"></div>
+
+				<label for="cidade">Cidade:</label>
+				<input class="input-cidade" type="text" name="cidade"  placeholder="Cidade" id="localidade" required>
+
+				<label for="uf">UF:</label>
+				<input class="input-uf" type="text" name="uf"  placeholder="UF" id="uf" required>
+
+				<label for="fone">Fone:</label>
+				<input class="input-fone" type="text" name="fone"  placeholder="Fone" required>
+
+				<!-- button submit -->
+				<input class="input-submit button" type="submit" value="ENVIAR">
+
+			</div>
+		</form>
+	</div>
+
+	<p class="count"></p>
+
+	<footer>
+		<span>Copyright <strong>Jorge Luiz</strong> © 2021-2022</span>
+	</footer>
+
+	<script src="./src/assets/js/homeRefreshToken.js"></script>
+	<script src="./src/assets/js/responsiveHamburguer.js"></script>
+
+	<script src="./src/assets/js/allCount.js"></script>
+	<script src="./src/assets/js/cepFill.js"></script>
+	<script src="./src/assets/js/onSubmit.js"></script>
+	<script src="./src/assets/js/exitPage.js"></script>
+	<script src="./src/assets/js/exitMenuHamburguer.js"></script>
+	<script src="./src/assets/js/logged.js"></script>
+</body>
+
+</html>

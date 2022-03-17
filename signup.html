@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin</title>
+    <link rel="stylesheet" href="./src/assets/css/signup.css">
+    <link rel="stylesheet" href="./src/assets/csserror/signup-error.css">
+
+     <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+</head>
+
+<body> 
+  <div class="container-center">
+    <div class="container-signup">
+      <form class="form-validator" >
+  
+          <h3>Cadastro de usuário</h3>
+          <input class="signup-username" type="text" name="username" placeholder="NOME"  data-rules="required|min=4">
+  
+          <input class="signup-email" type="text" name="email" placeholder="EMAIL" data-rules="required|email">
+          <div class="email-error"></div>
+  
+          <input class="signup-password" type="password" name="password" placeholder="PASSWORD" data-rules="required|min=4">
+  
+          <input class="signup-confirmPassword" type="password" name="confirmPassword"  placeholder="CONFIRME PASSWORD" data-rules="required|equal">
+          
+          <input class="myButton input" type="submit" id="signup-btn-submit" value="Registrar">
+          <p>voltar para tela <a href="/index.html">Login</a></p>    
+      </form>
+    </div>
+  </div>
+  
+ <h1 class="error"></h1>
+    
+    <script src="./src/assets/js/signup.js"></script>
+</body>
+</html>

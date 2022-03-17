@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- carrega página a cada 30 segundos -->
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <title>prontuarios pdf</title>
+    <link rel="stylesheet" href="./src/assets/css/styles.css">
+    <link rel="stylesheet" href="./src/assets/css/generatepdf.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div class="container-header">
+
+
+                <aside class="aside-padding">
+                    <!-- <a href="#" class="config">configuração</a> -->
+                    <input class="exit" type="button" value="Sair" onclick="exit()">
+                </aside>
+
+                <!-- menu hamburguer -->
+                <div class="menu-section">
+                    <div class="menu-toggle">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="./home.html">Home</a></li>
+                            <li><a href="./searche.html">Buscas</a></li>
+                            <li><a class="generatePDF" href="./generatePDF.html">Prontuarios PDF</a></li>
+                            <li><input class="exitMenuHamburguer" type="button" value="Sair" onclick="exit()"></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- container buttons -->
+        <div class="center">
+            <input class="go-back" type="button" value="VOLTAR" onclick="window.location = '/searche.html' ">
+            <input class="cpfCurrent" type="search" placeholder="Digite o CPF">
+            <input class="imprimir" type="button" value="IMPRIMIR" onclick="imprimitPDF()">
+        </div>
+
+
+        <div id="generatePDF">
+            <header>
+                <address>
+                    <h1 class="border">PRONTUÁRIO MÉDICO</h1>
+                    <p> Associação de Articulação </p>
+                    <p> Social dos Moradores </p>
+                    <p> Comerciantes do Bairro de Peixinhos - AASCMBP</p>
+                    <p class="padd"> CNPJ: 19.007.800/0001-62 </p>
+                </address>
+                <span>
+                    <!--<img alt="it" src="base64imagecodehere" width="150">-->
+                </span>
+            </header>
+            <address>
+                <h3 class="border padding-top">DADOS DO PACIENTE:</h3>
+                <p> nome: </p>
+                <p class="inline-block-nasc"> data de nascimento:</p>
+                <p class="inline-block-sexo"> sexo:</p>
+                <p> nome da mãe: </p>
+                <p> cartão do sus: </p>
+                <p class="inline-block-cpf"> cpf: </p>
+                <p class="inline-block-rg"> rg: </p>
+                <p class="inline-block-emissao"> Data de emissão:</p>
+                <p> cep: </p>
+                <p class="inline-block-endereco"> endereço: </p>
+                <p class="inline-block-uf">uf:</p>
+                <p class="inline-block-cidade"> cidade:</p>
+                <p class="inline-block-bairro">bairro: </p>
+                <p> Fone: </p>
+                <h3 class="border padding-top">INFORMAÇÕES DO PACIENTE:</h3>
+            </address>
+            <p class="info"><span></span></p>
+        </div>
+    </div>
+
+    <footer>
+        <span>Copyright <strong>Jorge Luiz</strong> © 2021-2022</span>
+    </footer>
+
+	<script src="./src/assets/js/responsiveHamburguer.js"></script>
+
+    <script src="./src/assets/js/generatePDF.js"></script>
+    <script src="./src/assets/js/logged.js"></script>
+    <script src="./src/assets/js/exitPage.js"></script>
+    <script src="./src/assets/js/exitMenuHamburguer.js"></script>
+</body>
+
+</html>

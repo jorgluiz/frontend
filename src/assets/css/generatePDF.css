@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* button */
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* button go-back */
+.go-back{
+    background: linear-gradient( rgba(0,212,255,1) 0%, rgba(6,70,161,1) 0%, rgba(9,9,121,1) 100%);
+    margin: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* button pesquisa */
+.cpfCurrent{
+    margin: 25px;
+}
+
+.imprimir{
+    background: linear-gradient( rgba(0,212,255,1) 0%, rgba(6,70,161,1) 0%, rgba(9,9,121,1) 100%);
+    margin: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.border{
+    border-bottom: solid 2px;
+    width: 380px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 800px;
+    
+    }
+   
+   address{
+    margin-left: 10px;
+} 
+
+.padding-top{
+    padding-top: 5px;
+}
+
+/* .padd{ 
+    margin: 0 0 10px 0;
+}
+
+.info{
+    margin: 10px 0 0 0;
+}
+
+.desc{
+    margin: 0 0 0 10px;
+} */
+
+p{
+    padding: 3px 0;
+}
+
+
+
+/* .inline-block-nasc,
+.inline-block-sexo{
+    display: inline-block;
+    margin: 0 120px 0 0;
+}
+.inline-block-cpf,
+.inline-block-rg,
+.inline-block-emissao{
+    display: inline-block;
+    margin: 0 150px 0 0;
+}
+.inline-block-endereco,
+.inline-block-uf{
+    display: inline-block;
+    margin: 0 120px 0 0;
+}
+.inline-block-cidade,
+.inline-block-bairro{
+    display: inline-block;
+    margin: 0 275px 0 0;
+} */
