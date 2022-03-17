@@ -56,7 +56,6 @@ const form = {
                 descricao: form.descricao.value
             })
         })
-        alert('cadastrado')
         location.reload(true)
         // .then(() =>  location.reload(true))
         // .then((res) => { JSON.stringify(res) })
