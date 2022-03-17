@@ -17,7 +17,7 @@
   
 ![compose](https://user-images.githubusercontent.com/35885897/158030567-281d5326-7786-4380-92dc-6b305dcd7baf.jpg)
   
-  saber mais sobre o porquê desses arquivos. Aqui está dois artigos fala sobre <a href="https://www.dio.me/articles/publicando-projetos-htmljavascript-e-css-no-heroku">01artigo<a/>  <a href="https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489">02artigo<a/>  referências
+  saber mais sobre o porquê desses arquivos. Aqui dois artigos fala sobre <a href="https://www.dio.me/articles/publicando-projetos-htmljavascript-e-css-no-heroku">01artigo<a/>  <a href="https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489">02artigo<a/>  referências
 
 
 <h3>OBS: deploy sem o arquivo compose.json</h3>
