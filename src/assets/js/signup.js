@@ -27,7 +27,7 @@ let objValidator = {
              })
          }
  
-         const prontuarioUrl = 'https://backend-flavio.herokuapp.com/signup'
+         const prontuarioUrl = 'https://backend-api-on.herokuapp.com/signup'
  
          fetch(prontuarioUrl, options)
          .then(response => {

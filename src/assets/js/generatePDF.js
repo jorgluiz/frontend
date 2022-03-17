@@ -10,7 +10,7 @@ const cpfCurrent = document.querySelector('.cpfCurrent')
 cpfCurrent.addEventListener('blur', () => {
     const current = cpfCurrent.value
 
-    fetch(`https://backend-flavio.herokuapp.com/prontuarios/buscas/${current}`, {
+    fetch(`https://backend-api-on.herokuapp.com/prontuarios/buscas/${current}`, {
         mode: 'cors',
         headers: {
             'Authorization': 'bearer ' + localStorage.getItem('token')
