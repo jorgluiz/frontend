@@ -1,7 +1,7 @@
 const p = document.querySelector('.count')
 
 
-const url = 'https://backend-flavio.herokuapp.com/allcount'
+const url = 'https://backend-api-on.herokuapp.com/allcount'
 
 fetch(url,{
     mode: 'cors',

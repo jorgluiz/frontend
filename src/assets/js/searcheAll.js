@@ -30,7 +30,7 @@ cpf.addEventListener("blur", async (event) => {  // evento "blur" captura o que 
         headers: { 'Authorization': 'bearer ' + localStorage.getItem('token') }
     }
     
-          fetch(`https://backend-flavio.herokuapp.com/prontuarios/buscas/${search}`, options)
+          fetch(`https://backend-api-on.herokuapp.com/prontuarios/buscas/${search}`, options)
              .then(resp => resp.json())
              .then(data => showData(data))
              .catch(e => e.message)
