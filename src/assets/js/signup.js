@@ -34,7 +34,7 @@ let objValidator = {
 
              if(response.ok === true) location.href = '/index.html'
      
-             if(response.status === 401){
+             if(response.status === 409){
      
                  let email = document.querySelector('.signup-email')
                  email.style='margin: 0 auto' // style input name
