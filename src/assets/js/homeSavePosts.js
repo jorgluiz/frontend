@@ -68,6 +68,7 @@ form.addEventListener('submit', async e => {
             alert('prontuario enviado com sucesso')
             // document.querySelector('.reset-form')//.reset()
             // const result = document.getElementById('result')
+            alert('parou!!!')
             location.reload(true)
         })
         .catch(e => {
