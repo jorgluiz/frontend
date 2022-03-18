@@ -53,7 +53,7 @@ const form = {
                 cidade: form.cidade.value,
                 cep: form.cep.value,
                 fone: form.fone.value,
-                descricao: form.descricao.value
+                descricao: form.descricao.value 
             })
         })
         location.reload(true)
