@@ -5,9 +5,13 @@ form.addEventListener('submit', async e => {
     e.preventDefault()
 
     const cpfSemString = document.querySelector('.input-cpf').value
-    const cpfComString = JSON.stringify(cpfSemString) 
+    console.log(cpfSemString)
+    const cpfComString = JSON.stringify(cpfSemString)
+    console.log(cpfComString) 
     const newCPF = cpfComString.replace(/[^0-9]/g, "")
+    console.log(newCPF)
     const cpfCrude = newCPF.replace(/\"/g, "")
+    console.log(cpfCrude)
     
     const formValue = {
         name: document.querySelector('.input-name'),
