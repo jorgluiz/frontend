@@ -2,6 +2,7 @@
 let objValidator = {
     handleSubmit: (event) => {
         event.preventDefault()
+        console.log(event)
 
           //  ###   submit form ao servidor   ###
           const formValue = {
