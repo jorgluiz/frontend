@@ -36,7 +36,6 @@ let objValidator = {
              if(response.ok === true) location.href = '/index.html'
      
              if(response.status === 409){
-                 alert('Já existe um email cadastrado')
      
                  let email = document.querySelector('.signup-email')
                  email.style='margin: 0 auto' // style input name
