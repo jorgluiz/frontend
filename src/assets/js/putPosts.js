@@ -27,7 +27,7 @@ const form = {
         const current = document.querySelector('.input-cpf')
         let cpfcurrent = current.value
     
-        const url = `https://backend-api-on.herokuapp.com/prontuarios/posts/buscas/${cpfcurrent}`
+        const url = `https://backend-api-on.herokuapp.com/posts/buscas/${cpfcurrent}`
     
         fetch(url, {
             method: "put",
