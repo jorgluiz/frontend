@@ -45,7 +45,7 @@ let objValidator = {
              //    errorElement.classList.add('error-email')
              
                 const errorElement = document.querySelector('.email-error')
-                errorElement.textContent = 'Já existe um email cadastrado'
+                errorElement.innerHTML = 'Já existe um email cadastrado'
      
                 email.insertAdjacentElement('afterend', errorElement)
              }
