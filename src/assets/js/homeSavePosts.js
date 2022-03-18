@@ -5,13 +5,9 @@ form.addEventListener('submit', async e => {
     e.preventDefault()
 
     const cpfSemString = document.querySelector('.input-cpf').value
-    console.log(cpfSemString)
-    const cpfComString = JSON.stringify(cpfSemString)
-    console.log(cpfComString) 
-    const newCPF = cpfComString.replace(/[^0-9]/g, "")
-    console.log(newCPF)
+    const cpfComString = JSON.stringify(cpfSemString) 
+    const newCPF = cpfComString.replace(/[^0-9]/g, "") //Esse simples trecho substituirá qualquer coisa que não seja um número por nada.
     const cpfCrude = newCPF.replace(/\"/g, "")
-    console.log(cpfCrude)
     
     const formValue = {
         name: document.querySelector('.input-name'),
@@ -68,7 +64,6 @@ form.addEventListener('submit', async e => {
             alert('prontuario enviado com sucesso')
             // document.querySelector('.reset-form')//.reset()
             // const result = document.getElementById('result')
-            alert('parou!!!')
             location.reload(true)
         })
         .catch(e => {
