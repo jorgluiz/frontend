@@ -8,7 +8,7 @@ let objValidator = {
             password: document.querySelector('#signin-password')
         }
 
-        const signin = "https://backend-api-on.herokuapp.com/signin"
+        const signin = "https://backend-api-on.herokuapp.com/auth/signin"
 
         axios.post(signin, {
 

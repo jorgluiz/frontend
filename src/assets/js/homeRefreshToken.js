@@ -1,6 +1,6 @@
 
 
-const urlRefreshToken = 'https://backend-api-on.herokuapp.com/refresh-token'
+const urlRefreshToken = 'https://backend-api-on.herokuapp.com/auth/refresh-token'
 
 fetch(urlRefreshToken, {
     headers: { 
