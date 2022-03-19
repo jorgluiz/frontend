@@ -43,7 +43,7 @@ let objValidator = {
                     //    errorElement.classList.add('error-email')
 
                     const errorElement = document.querySelector('.email-error')
-                    errorElement.textContent = 'E-mail não existe'
+                    errorElement.textContent = 'E-MAIL NÃO EXISTE, REGISTRE-SE JÁ'
 
                     email.insertAdjacentElement('afterend', errorElement)
                 }
