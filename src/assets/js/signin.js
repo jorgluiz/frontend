@@ -24,7 +24,7 @@ let objValidator = {
                 document.querySelector('.content').style.display = 'none';
                 document.querySelector('.box-load').style.display = 'block'
 
-
+                document.querySelector('.email-error').style="display: none"
 
                 setTimeout(() => {
                     location.href = '/home.html'
