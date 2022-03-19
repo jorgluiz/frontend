@@ -24,8 +24,6 @@ let objValidator = {
                 document.querySelector('.content').style.display = 'none';
                 document.querySelector('.box-load').style.display = 'block'
 
-                document.querySelector('.email-error').style = ''
-
                 setTimeout(() => {
                     location.href = '/home.html'
                 }, 2000)
@@ -47,6 +45,8 @@ let objValidator = {
                     errorElement.textContent = 'E-MAIL NÃO EXISTE, REGISTRE-SE JÁ'
 
                     email.insertAdjacentElement('afterend', errorElement)
+
+                    return true
                 }
             })
 
