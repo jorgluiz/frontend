@@ -80,7 +80,7 @@ let objValidator = {
                 switch (rDetails[0]) {
                     case 'required':
                         if (input.value == '') {
-                            document.querySelector('.email-error').remove()
+                            document.querySelector('.email-error').textContent = ''
                             return 'este campo é obrigatório'
                         }
                         break
