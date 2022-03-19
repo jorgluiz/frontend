@@ -40,7 +40,7 @@ let objValidator = {
                     //    errorElement.classList.add('error-email')
 
                     const errorElement = document.querySelector('.email-error')
-                    errorElement.innerHTML = '<p>Esta conta não existe. Insira uma conta diferente ou? <a href="/signup.html">obtenha uma nova.</a></p>'
+                    errorElement.innerHTML = 'Esta conta não existe. Insira uma conta diferente ou? <a href="/signup.html">obtenha uma nova.</a>'
 
                     email.insertAdjacentElement('beforebegin', errorElement)
                 }
