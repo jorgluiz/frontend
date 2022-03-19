@@ -33,6 +33,7 @@ let objValidator = {
             })
             .catch(error => {
                 if (error.response.status === 409) {
+                    document.querySelector('.error').style = ''
 
                     let email = document.querySelector('#signin-email')
                     console.log(email)
