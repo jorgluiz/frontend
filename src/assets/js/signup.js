@@ -2,7 +2,6 @@
 let objValidator = {
     handleSubmit: (event) => {
         event.preventDefault()
-        console.log(event)
 
           //  ###   submit form ao servidor   ###
           const formValue = {
@@ -40,6 +39,7 @@ let objValidator = {
                  let email = document.querySelector('.signup-email')
                  email.style='margin: 0 auto' // style input name
                  email.style.borderColor = '#FF0000' // style input name
+                 document.querySelector('.signup-password').style='margin: 0 auto'
      
              //    let errorElement = document.createElement('div')
              //    errorElement.classList.add('error-email')
@@ -93,6 +93,7 @@ let objValidator = {
                         if (input.value != '') {
                             let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                             if (!regex.test(input.value.toLowerCase())) {
+                                document.querySelector('.email-error').style='display: none'
                                 return 'E-mail digitado não é válido!'
                             }
                         }

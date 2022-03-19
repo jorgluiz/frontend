@@ -27,13 +27,26 @@ let objValidator = {
 
 
                 setTimeout(() => {
-                    location.href = '/home.html' 
+                    location.href = '/home.html'
                 }, 2000)
-                
+
             })
-            .catch(err => {
-                err
-                alert('senha ou email incorreto')
+            .catch(error => {
+                if (error.response.status === 409) {
+
+                    let email = document.querySelector('#signin-email')
+                    console.log(email)
+                    email.style = 'margin: 0 auto' // style input name
+                    email.style.borderColor = '#FF0000' // style input name
+
+                    //    let errorElement = document.createElement('div')
+                    //    errorElement.classList.add('error-email')
+
+                    const errorElement = document.querySelector('.email-error')
+                    errorElement.textContent = 'Já existe um email cadastrado'
+
+                    email.insertAdjacentElement('afterend', errorElement)
+                }
             })
 
 

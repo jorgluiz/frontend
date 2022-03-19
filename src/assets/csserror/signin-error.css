@@ -1,5 +1,10 @@
-.error{
+/* .error{
     font-size: 10px;
     color: red;
 
+} */
+
+.email-error{
+    font-size: 10px;
+    color: red;
 }
