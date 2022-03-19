@@ -24,7 +24,7 @@ let objValidator = {
                 document.querySelector('.content').style.display = 'none';
                 document.querySelector('.box-load').style.display = 'block'
 
-                document.querySelector('.email-error').style = "display: none"
+                document.querySelector('.email-error').style = ''
 
                 setTimeout(() => {
                     location.href = '/home.html'
@@ -79,7 +79,7 @@ let objValidator = {
                 switch (rDetails[0]) {
                     case 'required':
                         if (input.value == '') {
-                            document.querySelector('.email-error').style="display: none"
+                            document.querySelector('.email-error').style = ''
                             return 'este campo é obrigatório'
                         }
                         break
