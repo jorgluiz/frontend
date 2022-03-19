@@ -45,8 +45,6 @@ let objValidator = {
                     errorElement.textContent = 'E-MAIL NÃO EXISTE, REGISTRE-SE JÁ'
 
                     email.insertAdjacentElement('afterend', errorElement)
-
-                    return true
                 }
             })
 
@@ -80,7 +78,7 @@ let objValidator = {
                 switch (rDetails[0]) {
                     case 'required':
                         if (input.value == '') {
-                            document.querySelector('.email-error').textContent = ''
+                            // document.querySelector('.email-error').textContent = ''
                             return 'este campo é obrigatório'
                         }
                         break
