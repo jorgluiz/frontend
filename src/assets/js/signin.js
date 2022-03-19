@@ -31,20 +31,18 @@ let objValidator = {
             })
             .catch(error => {
                 if (error.response.status === 409) {
-                    document.querySelector('.error').textContent = ''
 
                     let email = document.querySelector('#signin-email')
-                    console.log(email)
-                    email.style = 'margin: 0 auto' // style input name
+                  //  email.style = 'margin: 0 auto' // style input name
                     email.style.borderColor = '#FF0000' // style input name
 
                     //    let errorElement = document.createElement('div')
                     //    errorElement.classList.add('error-email')
 
                     const errorElement = document.querySelector('.email-error')
-                    errorElement.textContent = 'E-MAIL NÃO EXISTE, REGISTRE-SE JÁ'
+                    errorElement.innerHTML = '<p>Esta conta não existe. Insira uma conta diferente ou? <a href="/signup.html">obtenha uma nova.</a></p>'
 
-                    email.insertAdjacentElement('afterend', errorElement)
+                    email.insertAdjacentElement('beforebegin', errorElement)
                 }
             })
 
@@ -87,13 +85,6 @@ let objValidator = {
                             return 'mínimo ' + rDetails[1] + ' de caracteres'
                         }
                         break
-                    case 'email': // email
-                        if (input.value != '') {
-                            let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                            if (!regex.test(input.value.toLowerCase())) {
-                                return 'E-mail digitado não é válido!'
-                            }
-                        }
                 }
             }
         }
