@@ -31,7 +31,6 @@ let objValidator = {
             })
             .catch(error => {
                 if (error.response.status === 409) {
-                    document.querySelector('.error').textContent = ''
 
                     let email = document.querySelector('#signin-email')
                     console.log(email)
@@ -78,7 +77,7 @@ let objValidator = {
                 switch (rDetails[0]) {
                     case 'required':
                         if (input.value == '') {
-                            // document.querySelector('.email-error').textContent = ''
+                            document.querySelector('.email-error').textContent = ''
                             return 'este campo é obrigatório'
                         }
                         break
