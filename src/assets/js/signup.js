@@ -32,7 +32,9 @@ let objValidator = {
          fetch(prontuarioUrl, options)
          .then(response => {
 
-             if(response.ok === true) location.href = '/index.html'
+            if(response.status === 204){
+                  location.href = '/index.html'
+            }
      
              if(response.status === 409){
      
@@ -49,7 +51,6 @@ let objValidator = {
      
                 email.insertAdjacentElement('afterend', errorElement)
              }
-           
          })
          .catch(err => err)
 
@@ -93,7 +94,6 @@ let objValidator = {
                         if (input.value != '') {
                             let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                             if (!regex.test(input.value.toLowerCase())) {
-                                document.querySelector('.email-error').style='display: none'
                                 return 'E-mail digitado não é válido!'
                             }
                         }
@@ -133,8 +133,13 @@ let objValidator = {
 
 }
 
-let form = document.querySelector('.form-validator')
-form.addEventListener('submit', objValidator.handleSubmit)
+const form = document.querySelector('.form-validator')
+
+const formObj ={
+    submit: document.querySelector('#signup-btn-submit')
+}
+
+formObj.submit.addEventListener('click', objValidator.handleSubmit)
 
 // form: () => {
 //     const formData = new FormData(this)
