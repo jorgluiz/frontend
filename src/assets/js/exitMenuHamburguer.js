@@ -7,8 +7,7 @@ function exitMenuHamburguer() {
 
     localStorage.removeItem('token')
     localStorage.removeItem('admin')
-    // localStorage.removeItem('user')
-
+    
     const display = body.style.display
     body.style.display = display === 'none' ? 'block' : 'none'
     location.href = '/index.html'

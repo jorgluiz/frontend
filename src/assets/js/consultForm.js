@@ -2,7 +2,7 @@
 // FUNÇÃO: PREENCHER CAMPOS "input" 
 
 const cpf = document.querySelector("#cpf") //variável de interface
-let search //variável de ambiente
+let searchCPF //variável de ambiente
 
 const inputBtn = document.querySelector('.input-btn')
 
@@ -19,9 +19,9 @@ const showData = (result) => {
 inputBtn.addEventListener("click", async (event) => {  // evento "blur" captura o que foi digitado no campo
     // if (event.keyCode === 13)
     if (cpf.value.includes(".")) {
-        search = cpf.value.replace(".", "")
+        searchCPF = cpf.value.replace(".", "")
     } else {
-        search = cpf.value
+        searchCPF = cpf.value
         // console.log(search)
     }
 
@@ -37,7 +37,7 @@ inputBtn.addEventListener("click", async (event) => {  // evento "blur" captura 
 
 
 
-    fetch(`https://backend-api-on.herokuapp.com/posts/buscas/${search}`, options)
+    fetch(`https://backend-api-on.herokuapp.com/posts/buscas/${searchCPF}`, options)
         .then(resp => resp.json())
         .then(data => showData(data))
         
