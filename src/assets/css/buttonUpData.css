@@ -1,4 +1,4 @@
-.input-submit1{
+.input-btn{
     width: 10px;
     border-radius: 5px;
     /* border-top: none;
@@ -7,7 +7,7 @@
     border-bottom: none; */
     }
     
-    .input-submit1{
+    .input-btn{
     background: #8d8d8d;
     font-size: 17px;
     width: 90px;
