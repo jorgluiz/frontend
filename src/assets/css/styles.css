@@ -259,7 +259,7 @@ top: 870px;
 
 }
 
-@media  (max-height: 1290px){
+@media  screen and (min-height: 800px) and (max-height: 1290px){
     footer{
         position: absolute;
         top: 1150px
