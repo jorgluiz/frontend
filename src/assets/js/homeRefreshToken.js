@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable linebreak-style */
 
 
 const urlRefreshToken = 'https://backend-api-on.herokuapp.com/auth/refresh-token'
@@ -6,34 +8,34 @@ fetch(urlRefreshToken, {
     headers: { 
         'Authorization': 'bearer ' + localStorage.getItem('token')
         // 'x-access-token': localStorage.getItem('refresh')
-     },
-     method: 'post',
-     mode: 'cors',
-     cache: 'default',
+    },
+    method: 'post',
+    mode: 'cors',
+    cache: 'default',
 })
-.then(res => res.json())
-.then(token => {
+    .then(res => res.json())
+    .then(token => {
     // console.log('refresh token', token)
     
-    localStorage.removeItem('token') // remove token atual (  signin )
+        localStorage.removeItem('token') // remove token atual (  signin )
     
-    const admin = token.admin
-    localStorage.setItem('admin', admin)
+        const admin = token.admin
+        localStorage.setItem('admin', admin)
 
-    const refreshToken = token.accessToken
-    localStorage.setItem('token', refreshToken)
-})
-.catch(err => err)
+        const refreshToken = token.accessToken
+        localStorage.setItem('token', refreshToken)
+    })
+    .catch(err => err)
 
 
 // setTimeout(() => {
 
-    // const container = document.querySelector('.container')
-    // const body = document.querySelector('body')
-    // const div = document.createElement('div')
-    // div.innerHTML = "sou uma divo estou dentro do setTimeout"
+// const container = document.querySelector('.container')
+// const body = document.querySelector('body')
+// const div = document.createElement('div')
+// div.innerHTML = "sou uma divo estou dentro do setTimeout"
 
-    // container.insertAdjacentElement('beforebegin', div)
+// container.insertAdjacentElement('beforebegin', div)
 
 //     localStorage.removeItem('token')
 

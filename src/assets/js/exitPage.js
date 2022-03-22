@@ -1,8 +1,11 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable linebreak-style */
 // FUNÇÃO: SAIR DA PÁFINA
 
 const body = document.querySelector('body')
 
- function exit() {
+function exit() {
      
 
     localStorage.removeItem('token')

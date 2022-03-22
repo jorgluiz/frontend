@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable linebreak-style */
 // objeto validador com métodos (funcionalidades)
 let objValidator = {
     handleSubmit: (event) => {
@@ -8,7 +10,7 @@ let objValidator = {
             password: document.querySelector('#signin-password')
         }
 
-        const signin = "https://backend-api-on.herokuapp.com/auth/signin"
+        const signin = 'https://backend-api-on.herokuapp.com/auth/signin'
 
         axios.post(signin, {
 
@@ -21,7 +23,7 @@ let objValidator = {
                 console.log(token)
                 localStorage.setItem('token', token)
 
-                document.querySelector('.content').style.display = 'none';
+                document.querySelector('.content').style.display = 'none'
                 document.querySelector('.box-load').style.display = 'block'
 
                 setTimeout(() => {
@@ -33,7 +35,7 @@ let objValidator = {
                 if (error.response.status === 409) {
 
                     let email = document.querySelector('#signin-email')
-                  //  email.style = 'margin: 0 auto' // style input name
+                    //  email.style = 'margin: 0 auto' // style input name
                     email.style.borderColor = '#FF0000' // style input name
 
                     //    let errorElement = document.createElement('div')
@@ -74,17 +76,17 @@ let objValidator = {
                 // console.log(rules[key])
                 let rDetails = rules[key].split('=')
                 switch (rDetails[0]) {
-                    case 'required':
-                        if (input.value == '') {
-                            document.querySelector('.email-error').textContent = ''
-                            return 'este campo é obrigatório'
-                        }
-                        break
-                    case 'min': //password
-                        if (input.value.length < rDetails[1]) {
-                            return 'mínimo ' + rDetails[1] + ' de caracteres'
-                        }
-                        break
+                case 'required':
+                    if (input.value == '') {
+                        document.querySelector('.email-error').textContent = ''
+                        return 'este campo é obrigatório'
+                    }
+                    break
+                case 'min': //password
+                    if (input.value.length < rDetails[1]) {
+                        return 'mínimo ' + rDetails[1] + ' de caracteres'
+                    }
+                    break
                 }
             }
         }

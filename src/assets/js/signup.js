@@ -1,58 +1,61 @@
+/* eslint-disable no-case-declarations */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-undef */
 // objeto validador com métodos (funcionalidades)
 let objValidator = {
     handleSubmit: (event) => {
         event.preventDefault()
 
-          //  ###   submit form ao servidor   ###
-          const formValue = {
+        //  ###   submit form ao servidor   ###
+        const formValue = {
             username: document.querySelector('.signup-username'),
             email: document.querySelector('.signup-email'),
             password: document.querySelector('.signup-password'),
             confirmPassword: document.querySelector('.signup-confirmPassword'),
         }
  
-         const options = {
-             method: 'post',
-             mode: 'cors',
+        const options = {
+            method: 'post',
+            mode: 'cors',
             headers: {
-               Accept: "application/json, text/plain, */*",
-               "Content-Type": "application/json",
+                Accept: 'application/json, text/plain, */*',
+                'Content-Type': 'application/json',
             },
             
-             body: JSON.stringify({
-                 username: formValue.username.value.trim(),
-                 email: formValue.email.value.toLowerCase().trim(),
-                 password: formValue.password.value,
-                 confirmPassword: formValue.confirmPassword.value
-             })
-         }
+            body: JSON.stringify({
+                username: formValue.username.value.trim(),
+                email: formValue.email.value.toLowerCase().trim(),
+                password: formValue.password.value,
+                confirmPassword: formValue.confirmPassword.value
+            })
+        }
  
-         const prontuarioUrl = 'https://backend-api-on.herokuapp.com/auth/signup'
+        const prontuarioUrl = 'https://backend-api-on.herokuapp.com/auth/signup'
  
-         fetch(prontuarioUrl, options)
-         .then(response => {
+        fetch(prontuarioUrl, options)
+            .then(response => {
 
-            if(response.status === 204){
-                  location.href = '/index.html'
-            }
+                if(response.status === 204){
+                    location.href = '/index.html'
+                }
      
-             if(response.status === 409){
+                if(response.status === 409){
      
-                 let email = document.querySelector('.signup-email')
-                 email.style='margin: 0 auto' // style input name
-                 email.style.borderColor = '#FF0000' // style input name
-                 document.querySelector('.signup-password').style='margin: 0 auto'
+                    let email = document.querySelector('.signup-email')
+                    email.style='margin: 0 auto' // style input name
+                    email.style.borderColor = '#FF0000' // style input name
+                    document.querySelector('.signup-password').style='margin: 0 auto'
      
-             //    let errorElement = document.createElement('div')
-             //    errorElement.classList.add('error-email')
+                    //    let errorElement = document.createElement('div')
+                    //    errorElement.classList.add('error-email')
              
-                const errorElement = document.querySelector('.email-error')
-                errorElement.textContent = 'Já existe um email cadastrado'
+                    const errorElement = document.querySelector('.email-error')
+                    errorElement.textContent = 'Já existe um email cadastrado'
      
-                email.insertAdjacentElement('afterend', errorElement)
-             }
-         })
-         .catch(err => err)
+                    email.insertAdjacentElement('afterend', errorElement)
+                }
+            })
+            .catch(err => err)
 
         // obter todos inputs
         let inputs = form.querySelectorAll('input')
@@ -80,29 +83,29 @@ let objValidator = {
                 // console.log(rules[key])
                 let rDetails = rules[key].split('=')
                 switch (rDetails[0]) {
-                    case 'required':
-                        if (input.value == '') {
-                            return 'este campo é obrigatório'
-                        }   
-                        break
-                    case 'min': //password
-                        if (input.value.length < rDetails[1]) {
-                            return 'mínimo ' + rDetails[1] + ' de caracteres'
+                case 'required':
+                    if (input.value == '') {
+                        return 'este campo é obrigatório'
+                    }   
+                    break
+                case 'min': //password
+                    if (input.value.length < rDetails[1]) {
+                        return 'mínimo ' + rDetails[1] + ' de caracteres'
+                    }
+                    break
+                case 'email': // email
+                    if (input.value != '') {
+                        let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                        if (!regex.test(input.value.toLowerCase())) {
+                            return 'E-mail digitado não é válido!'
                         }
-                        break
-                    case 'email': // email
-                        if (input.value != '') {
-                            let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                            if (!regex.test(input.value.toLowerCase())) {
-                                return 'E-mail digitado não é válido!'
-                            }
-                        }
-                        break
-                    case 'equal': //confirmPassword
-                        const confirmPassword = document.querySelector('.signup-password')
-                        if (input.value != confirmPassword.value){
-                            return 'senha não confere'
-                        }
+                    }
+                    break
+                case 'equal': //confirmPassword
+                    const confirmPassword = document.querySelector('.signup-password')
+                    if (input.value != confirmPassword.value){
+                        return 'senha não confere'
+                    }
                 }
             }
         }

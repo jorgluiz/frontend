@@ -1,11 +1,12 @@
-
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+/* eslint-disable linebreak-style */
 // estrutura do PDF
 const generate = document.querySelector('#generatePDF')
 let output = ''
 
 // input de entrada do CPF para consulta
 const cpfCurrent = document.querySelector('.cpfCurrent')
-
 
 cpfCurrent.addEventListener('blur', () => {
     const current = cpfCurrent.value
@@ -54,9 +55,9 @@ cpfCurrent.addEventListener('blur', () => {
                             <p><span>${newData.descricao}</span></p>
                         </address>
                     </div>
-            `;
-            });
-            generate.innerHTML = output;
+            `
+            })
+            generate.innerHTML = output
         })
 
 })

@@ -1,9 +1,7 @@
-
-
+/* eslint-disable no-undef */
+/* eslint-disable linebreak-style */
 const generate = document.querySelector('#generate')
 let output = ''
-
-
 
 const options = {
     headers: {
@@ -34,7 +32,7 @@ fetch(urlUsers, options)
             <input type="text" name="admin" value="${item.admin}">
             </form>
   
-            `;
+            `
         })
-        generate.innerHTML = output;
+        generate.innerHTML = output
     })

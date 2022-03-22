@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable linebreak-style */
 // FUNÇÃO SUBMIT enviar form para o servidor
 let form = document.querySelector('.flex-row-form')
 
@@ -6,7 +8,8 @@ form.addEventListener('submit', async e => {
 
     const cpfSemString = document.querySelector('.input-cpf').value
     const cpfComString = JSON.stringify(cpfSemString) 
-    const newCPF = cpfComString.replace(/[^0-9]/g, "") //Esse simples trecho substituirá qualquer coisa que não seja um número por nada.
+    const newCPF = cpfComString.replace(/[^0-9]/g, '') //Esse simples trecho substituirá qualquer coisa que não seja um número por nada.
+    // eslint-disable-next-line quotes
     const cpfCrude = newCPF.replace(/\"/g, "")
     
     const formValue = {
@@ -33,8 +36,8 @@ form.addEventListener('submit', async e => {
         method: 'POST',
         mode: 'cors',
         headers: {
-            Accept: "application/json, text/plain, */*",
-            "Content-Type": "application/json",
+            Accept: 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
             'Authorization': 'bearer ' + localStorage.getItem('token')
         },
 
