@@ -319,9 +319,9 @@ align-items: center;
 /* transition: transform 0.2s 1s; */
 }
 
-.menu-section.on:hover{
-transform: scale(1.5);
-}
+/* .menu-section.on:hover{
+transform: scale(0.5);
+} */
 
 
 .menu-section.on nav{
