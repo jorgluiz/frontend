@@ -209,13 +209,6 @@ display: none;
 
 /* ### responsive init ### */
 
-@media  (max-height: 1290px){
-footer{
-    position: absolute;
-    top: 1150px
-}
-}
-
 @media screen and (max-width: 200px) and (max-width: 640px){
 .flex-row-form{
 display: flex;
@@ -265,6 +258,13 @@ top: 870px;
 }
 
 }
+
+@media  (max-height: 1290px){
+    footer{
+        position: absolute;
+        top: 1150px
+    }
+    }
 
 
 
