@@ -351,11 +351,11 @@ text-align: center;
 display: block;
 }
 
-/* .menu-section.on nav ul a{
+.menu-section.on nav ul a{
 transition-duration: 0.5s;
 line-height: 4rem;
 display: block;
-} */
+}
 
 .exitMenuHamburguer{
 display: block;
