@@ -316,7 +316,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 
-transition: transform 0.2s 1s;
+/* transition: transform 0.2s 1s; */
 }
 
 .menu-section.on:hover{
