@@ -360,6 +360,15 @@ display: block;
 .exitMenuHamburguer{
 display: block;
 }
+
+.go-back{
+    margin: 0;
+}
+
+.imprimir{
+    margin: 0;
+}
+
 }
 
 

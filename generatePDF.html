@@ -8,8 +8,8 @@
     <!-- carrega página a cada 30 segundos -->
     <!-- <meta http-equiv="refresh" content="30"> -->
     <title>prontuarios pdf</title>
+    <link rel="stylesheet" href="./src/assets/css/generatePDF.css">
     <link rel="stylesheet" href="./src/assets/css/styles.css">
-    <link rel="stylesheet" href="./src/assets/css/generatepdf.css">
 </head>
 
 <body>
@@ -17,8 +17,7 @@
 
         <header>
             <div class="container-header">
-
-
+                
                 <aside class="aside-padding">
                     <!-- <a href="#" class="config">configuração</a> -->
                     <input class="exit" type="button" value="Sair" onclick="exit()">
@@ -55,7 +54,7 @@
         <div id="generatePDF">
             <header>
                 <address>
-                    <h1 class="border">PRONTUÁRIO MÉDICO</h1>
+                    <h1>PRONTUÁRIO MÉDICO</h1>
                     <p> Associação de Articulação </p>
                     <p> Social dos Moradores </p>
                     <p> Comerciantes do Bairro de Peixinhos - AASCMBP</p>
@@ -66,7 +65,7 @@
                 </span>
             </header>
             <address>
-                <h3 class="border padding-top">DADOS DO PACIENTE:</h3>
+                <h3 class="padding-top">DADOS DO PACIENTE:</h3>
                 <p> nome: </p>
                 <p class="inline-block-nasc"> data de nascimento:</p>
                 <p class="inline-block-sexo"> sexo:</p>
@@ -81,7 +80,7 @@
                 <p class="inline-block-cidade"> cidade:</p>
                 <p class="inline-block-bairro">bairro: </p>
                 <p> Fone: </p>
-                <h3 class="border padding-top">INFORMAÇÕES DO PACIENTE:</h3>
+                <h3 class="padding-top">INFORMAÇÕES DO PACIENTE:</h3>
             </address>
             <p class="info"><span></span></p>
         </div>

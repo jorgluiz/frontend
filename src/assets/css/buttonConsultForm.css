@@ -19,7 +19,7 @@
     box-shadow: 2px 2px 0 0 black;
     }
 
-    .input-submit1:hover{
+    .input-btn:hover{
         -webkit-transform: scale(0.9);
         -ms-transform: scale(0.9);
         transform: scale(0.9);
@@ -31,7 +31,7 @@
 
 /*    button 2    */
 
-    .input-submit2{
+    .input-submit{
         width: 10px;
         border-radius: 5px;
         /* border-top: none;
@@ -40,7 +40,7 @@
         border-bottom: none; */
         }
         
-        .input-submit2{
+        .input-submit{
         background: #8d8d8d;
         font-size: 16px;
         width: 90px;
@@ -52,7 +52,7 @@
         box-shadow: 2px 2px 0 0 black;
         }
 
-   .input-submit2:hover{
+   .input-submit:hover{
             -webkit-transform: scale(0.9);
             -ms-transform: scale(0.9);
             transform: scale(0.9);
