@@ -335,7 +335,7 @@ top: 15px;
 }
 
 .menu-section.on .menu-toggle .one{
-transform: rotate(45deg) translate(7px, 7px);
+transform: rotate(45deg) translate(7px, 6px);
 }
 
 .menu-section.on .menu-toggle .two{
